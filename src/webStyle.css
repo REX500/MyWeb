@@ -158,7 +158,6 @@ hr {
     -o-background-size: cover;
     background-size: cover;
     margin: 0;
-    overflow: scroll;
 }
 #findMoreButton {
     background-color: #4CAF50; /* Green */
