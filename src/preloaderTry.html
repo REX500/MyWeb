@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Filip Land</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <link rel="stylesheet" href="preStyle.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<div class="container-fluid" id="wrapper">
+    <h1>This is the h1</h1>
+    <p>This is the paragraph!</p>
+</div>
+
+<!-- jQuery Plugin -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Preloader script -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).on('load', function() { // makes sure the whole site is loaded
+        $('#status').fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow':'visible'});
+    })
+    //]]>
+</script>
+
+</body>
+</html>

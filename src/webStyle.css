@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow: hidden;
 }
 
 /* loader */
@@ -156,7 +157,8 @@ hr {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position-y: 0px;
+    margin: 0;
+    overflow: scroll;
 }
 #findMoreButton {
     background-color: #4CAF50; /* Green */
@@ -269,6 +271,12 @@ hr {
     color: whitesmoke;
     text-align: center;
     padding-bottom: 0px;
+}
+#imagesDiv{
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 60px;
 }
 
 
