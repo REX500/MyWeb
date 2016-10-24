@@ -30,7 +30,6 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="aboutMe.html">About</a></li>
                 <li><a href="#contactDiv">Contact</a></li>
-                <li><a href="#">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -55,10 +54,67 @@
             realized that that will be my occupation.
             Exactly those two are what make me a person that I am today....</p>
         <form action="aboutMe.html">
+
             <button type="submit" href="aboutMe.html" id="findMoreButton"> FIND OUT MORE</button>
+            <button type="button" onclick="show('hiddenDiv');" id="expandButton"> Show/hide</button>
+
         </form>
     </div>
+    <div class="container-fluid" id="hiddenDiv" style="display: none">
+        <p>
+            I was born in the capital of Croatia, Zagreb on 4th of June 1996. as a Son of Darko and Snjezana.
+            Growing up I spent quite a lot of time in the forest thanks to two weekend houses that we had.
+            There I learned how to ride a bike, motor bike, play in the forest, learned to respect the nature
+            and so on. Not long after I started training sports. I always had a dedication towards sports and
+            wanted to be the best. Search for the right sport wasn't easy but I found it in running. Started when
+            I was 15 and not long after I joined the athletics club Dinamo Zrinjevac where I discovered that I am
+            far more capable then I though before. That shaped me for life, put me in the mind state that I am
+            now in.
+            I went to a Technical school where I was thought how electronics work. We did stuff from soldering
+            our own electric circuits to programing in C and assembler.
+            Not to be mistaken, running wasnt the only big accomplishment, coming to Denmark and getting settled
+            was something that I am still working on but I know that my past shaped me in a person that is able
+            to succeed no matter what!
+        </p>
+        <hr>
+        <p>Ever since I can remember I was doing sports. Since I could walk I did tennis, swimming, basketball, football,
+            airsoft, climbing, mtb driving, motorcicyling, martial arts, athletics and now gym. I believe that us as human
+            we are defined by moving, we simply cannot function without exercise and therefore I urge everyone I meet to
+            get of their buts and start doing something!</p>
+        <h1>Track&Field</h1>
+        <hr>
+        <div class="container-fluid" style="align-content: center">
+            <p>One of my biggest turn-arounds in life was when I started to run. That experience changed my life completely.</p>
+        </div>
+         <!--here we will have an expanding div with my pictures-->
 
+            <div class="col-md-6">
+                <button type="button" onclick="show('pictures')" id="picturesButton">Pictures</button>
+            </div>
+            <div class="col-md-6">
+                <form action="http://profil.kea.dk/workprofile/profile/38461/filip-malek">
+                    <button type="submit" style="padding-left: 20px" id="resimeButton">Resime</button>
+                </form>
+            </div>
+
+        <div class="container-fluid" id="pictures" style="display: none">
+            <h1>Memories...</h1>
+            <hr>
+            <div class="col-md-3">
+                <img src="images/Cover/airsoft.jpg" alt="Airsoft image" height="400" width="350">
+            </div>
+            <div class="col-md-3">
+                <img src="images/Cover/gym.jpg" alt="Gym image" height="400" width="350">
+            </div>
+            <div class="col-md-3">
+                <img src="images/Cover/sailing.jpg" alt="Sailing image" height="400" width="350">
+            </div>
+            <div class="col-md-3">
+                <img src="images/track.jpg" alt="Track Pic"  height="400" width="350">
+            </div>
+        </div>
+    </div>
+    <br>
     <!-- The last part of the section aka. contact information -->
     <div class="container-fluid" id="contactDiv" align="middle" style=" height: 250px">
         <h1 style="font-size: 66px" align="middle">Feel free to ask!</h1>
@@ -85,6 +141,16 @@
         $('body').delay(350).css({'overflow':'visible'});
     })
     //]]>
+
+    function show(elementId) {
+
+        var e = document.getElementById(elementId);
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+
 </script>
 
 

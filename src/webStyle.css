@@ -103,6 +103,47 @@ body{
     width: 100%;
     color: white;
 }
+#hiddenDiv{
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    opacity: 0.9;
+    text-align: center;
+    color: white;
+}
+#hiddenDiv h1{
+    font-size: 70px;
+}
+#hiddenDiv p{
+    opacity:0.8;
+    font-size: 30px;
+    font-family: engel-light;
+}
+#expandButton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    vertical-align: middle;
+    horiz-align: center;
+}
+#picturesButton,
+  #resimeButton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    vertical-align: middle;
+    horiz-align: center;
+}
 #aboutDiv p{
     opacity: 0.8;
 }
