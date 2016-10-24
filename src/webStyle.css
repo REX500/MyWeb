@@ -201,6 +201,10 @@ hr {
     color: white;
     width: 100%;
 }
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 #gymDiv h2{
     padding-top: 50px;
     font-size: 40px;
