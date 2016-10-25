@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="webStyle.css">
 </head>
 <body>
-
+<!--
 <div id="preloader">
     <div id="load"></div>
 </div>
+-->
 <div class="container-fluid" id="wrapper">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -39,10 +40,10 @@
     </nav>
 
     <!-- Main content of the website -->
-    <div class="container-fluid" id="welcomeDiv" data-background-color="transparent">
-        <h1 style="font-size: 65px" align="middle">Welcome</h1>
+    <div class="container-fluid" id="welcomeDiv">
+        <h1 align="middle">Welcome</h1>
         <hr>
-        <p style="font-size: 22px" align="middle"> Reading trough this page will take you just a minute, while making it took me nearly forever :)</p>
+        <p  align="middle"> Reading trough this page will take you just a minute, while making it took me nearly forever :)</p>
     </div>
     <div class="section" id="aboutDiv" data-background-color="$dark" style="text-align: center">
         <h1 style="font-size: 66px" align="middle"> About Me</h1>
@@ -53,12 +54,8 @@
             beauties. Not long after I discovered technology and
             realized that that will be my occupation.
             Exactly those two are what make me a person that I am today....</p>
-        <form action="aboutMe.html">
 
-            <button type="submit" href="aboutMe.html" id="findMoreButton"> FIND OUT MORE</button>
-            <button type="button" onclick="show('hiddenDiv');" id="expandButton"> Show/hide</button>
-
-        </form>
+            <button type="button"  id="expandButton" class="expander"> Show/hide</button>
     </div>
     <div class="container-fluid" id="hiddenDiv" style="display: none">
         <p>
@@ -88,33 +85,33 @@
         </div>
          <!--here we will have an expanding div with my pictures-->
 
-            <div class="col-md-6">
-                <button type="button" onclick="show('pictures')" id="picturesButton">Pictures</button>
-            </div>
-            <div class="col-md-6">
-                <form action="http://profil.kea.dk/workprofile/profile/38461/filip-malek">
-                    <button type="submit" style="padding-left: 20px" id="resimeButton">Resime</button>
-                </form>
-            </div>
-
-        <div class="container-fluid" id="pictures" style="display: none">
-            <h1>Memories...</h1>
-            <hr>
-            <div class="col-md-3">
-                <img src="images/Cover/airsoft.jpg" alt="Airsoft image" height="400" width="350">
-            </div>
-            <div class="col-md-3">
-                <img src="images/Cover/gym.jpg" alt="Gym image" height="400" width="350">
-            </div>
-            <div class="col-md-3">
-                <img src="images/Cover/sailing.jpg" alt="Sailing image" height="400" width="350">
-            </div>
-            <div class="col-md-3">
-                <img src="images/track.jpg" alt="Track Pic"  height="400" width="350">
-            </div>
-        </div>
+         <form action="http://profil.kea.dk/workprofile/profile/38461/filip-malek">
+              <button type="submit" style="padding-left: 20px" id="resimeButton">Resime</button>
+         </form>
     </div>
     <br>
+    <br>
+    <br>
+
+    <div class="container-fluid" id="mailDiv">
+        <form action="https://formspree.io/filamalek@hotmail.com"
+              method="POST">
+
+            <div class="contact-info-group">
+                <label><span>Your Name</span></label>
+                <label><span>Your E-mail Address</span></label>
+
+                <input type="text" name="name">
+                <input type="email" name="_replyto">
+            </div>
+
+            <label><span>Feel Free To Speak Out!</span></label>
+            <textarea name="message"></textarea><br>
+            <input type="submit" value="Send" id="sendMailButton">
+        </form>
+    </div>
+
+
     <!-- The last part of the section aka. contact information -->
     <div class="container-fluid" id="contactDiv" align="middle" style=" height: 250px">
         <h1 style="font-size: 66px" align="middle">Feel free to ask!</h1>
@@ -142,14 +139,14 @@
     })
     //]]>
 
-    function show(elementId) {
+    $( "#expandButton" ).click(function() {
+        $( "#hiddenDiv" ).slideToggle('slow');
+    });
 
-        var e = document.getElementById(elementId);
-        if(e.style.display == 'block')
-            e.style.display = 'none';
-        else
-            e.style.display = 'block';
-    }
+    $( "#picturesButton" ).click(function() {
+        $( "#pictures" ).slideToggle('slow');
+    });
+
 
 </script>
 

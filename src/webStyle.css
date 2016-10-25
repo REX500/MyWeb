@@ -83,16 +83,20 @@ body{
 
 
 #welcomeDiv{
-    opacity: 0.9;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-size: 70px;
+    font-size: 200px;
     height: 400px;
     width: 100%;
     color: white;
-    padding-top: 180px;
+    padding-top: 220px;
+}
+#welcomeDiv h1{
+    font-size: 80px;
 }
 #welcomeDiv p{
     opacity: 0.9;
+    font-family: ‘Courier New’, Courier, monospace;
+    font-size: 25px;
 }
 #aboutDiv{
     padding-top: 170px;
@@ -103,22 +107,29 @@ body{
     width: 100%;
     color: white;
 }
+#aboutDiv p{
+    font-family: ‘Courier New’, Courier, monospace;
+    font-size: 25px;
+}
 #hiddenDiv{
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     opacity: 0.9;
     text-align: center;
     color: white;
+    -webkit-transition: width 0.3s ease-in-out;
+    height: 900px;
 }
 #hiddenDiv h1{
     font-size: 70px;
 }
 #hiddenDiv p{
     opacity:0.8;
-    font-size: 30px;
-    font-family: engel-light;
+    font-size: 25px;
+    font-family: ‘Courier New’, Courier, monospace;;
+
 }
 #expandButton{
-    background-color: #4CAF50; /* Green */
+    background-color: gray; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -129,10 +140,13 @@ body{
     border-radius: 2px;
     vertical-align: middle;
     horiz-align: center;
+}
+#expandButton:hover{
+    background-color: dimgray;
 }
 #picturesButton,
   #resimeButton{
-    background-color: #4CAF50; /* Green */
+    background-color: gray; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -143,13 +157,17 @@ body{
     border-radius: 2px;
     vertical-align: middle;
     horiz-align: center;
+}
+#picturesButton:hover,
+ #resimeButton:hover{
+    background-color: dimgray;
 }
 #aboutDiv p{
     opacity: 0.8;
 }
 hr {
     max-width: 50px;
-    border-color: #4178f0;
+    border-color: darkslategray;
     border-width: 3px;
 }
 #aboutDivParagraph{
@@ -163,8 +181,9 @@ hr {
     opacity: 0.7;
 }
 .navbar-default {
-    background-color: #4CAF50;
-    border-color: black;
+    background-color: lightblue;
+    border-color: gray;
+    opacity: 0.5;
 }
 .navbar-brand:focus {
     outline: 0;
@@ -185,7 +204,8 @@ hr {
 
 /*Normal .css for the pages bellow, not the preloader*/
 #wrapper{
-    background: url(images/main.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(images/main2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -221,7 +241,7 @@ hr {
     height: 400px;
     width: auto;
     color: white;
-    background-color: #4CAF50;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 /*Styling for the about me section is bellow*/
 .parallax{
@@ -323,6 +343,64 @@ hr {
     font-size: 60px;
 }
 
+/* mail div bellow*/
+#mailDiv{
+    max-width: 500px;
+    min-height: 300px;
+    margins: 0 auto 50px;
+    color: white;
+}
+#mailDiv label{
+    display: block;
+    margin-bottom: 20px;
+}
+#mailDiv span{
+    display: block;
+}
+.contact-info-group label{
+    width: 50%;
+    padding-right: 10%;
+    float: left;
+    +box-sizing(border-box);
+}
 
+
+#mailDiv input, textarea{
+    border: 3px solid gray;
+    +box-sizing(border-box);
+}
+#mailDiv input, textarea:focus{
+    color: dimgray;
+}
+#mailDiv textarea{
+    margin: 0px; width: 355px; height: 102px;
+}
+#sendMailButton{
+    background-color: gray; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    vertical-align: middle;
+    horiz-align: center;
+}
+
+/*
+    To do:
+        1. Put the form inside the last div as it is a contact form anyway
+        2. fix the colors on the button, text specifically
+        3. place the phone number on a right spot
+        4. make icons for the div, one for phone the other for a mail
+        5. delete the about.html file as it is worthless
+        6. think about a place where u could put a slideshow
+*/
+
+#sendMailButton:hover{
+    background-color: dimgray;
+}
 
 /*trying to make color change with a scroll*/
