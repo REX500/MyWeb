@@ -137,7 +137,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    border-radius: 2px;
+    border-radius: 0px;
     vertical-align: middle;
     horiz-align: center;
 }
@@ -181,9 +181,8 @@ hr {
     opacity: 0.7;
 }
 .navbar-default {
-    background-color: lightblue;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     border-color: gray;
-    opacity: 0.5;
 }
 .navbar-brand:focus {
     outline: 0;
@@ -199,9 +198,11 @@ hr {
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
-    color: black;
+    color: white;
 }
-
+.fa-facebook{
+    color: white;
+}
 /*Normal .css for the pages bellow, not the preloader*/
 #wrapper{
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -223,7 +224,6 @@ hr {
 #findMoreButton {
     background-color: #4CAF50; /* Green */
     border: none;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -237,11 +237,13 @@ hr {
     padding-top: 70px;
     opacity: 0.9;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;;
-    font-size: 50px;
-    height: 400px;
+    height: 630px;
     width: auto;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+#contactDiv hr{
+    border-color: white;
 }
 /*Styling for the about me section is bellow*/
 .parallax{
@@ -384,7 +386,7 @@ hr {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    border-radius: 2px;
+    border-radius: 0px;
     vertical-align: middle;
     horiz-align: center;
 }

@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <!-- Icons script link -->
+    <script src="https://use.fontawesome.com/33c8c94010.js"></script>
     <link rel="stylesheet" href="webStyle.css">
 </head>
 <body>
@@ -29,12 +31,12 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="aboutMe.html">About</a></li>
+                <li class="expander"><a href="#aboutDiv">About</a></li>
                 <li><a href="#contactDiv">Contact</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <ul class="nav navbar-nav navbar-right" id="facebookNavbar">
+                <li><a href="#"><i class="fa fa-facebook fa-1x" aria-hidden="true"></i></a></li>
+                <li><a href="#"></a></li>
             </ul>
         </div>
     </nav>
@@ -55,7 +57,7 @@
             realized that that will be my occupation.
             Exactly those two are what make me a person that I am today....</p>
 
-            <button type="button"  id="expandButton" class="expander"> Show/hide</button>
+            <button type="button"  id="expandButton" class="expander"> More</button>
     </div>
     <div class="container-fluid" id="hiddenDiv" style="display: none">
         <p>
@@ -92,37 +94,35 @@
     <br>
     <br>
     <br>
-
-    <div class="container-fluid" id="mailDiv">
-        <form action="https://formspree.io/filamalek@hotmail.com"
-              method="POST">
-
-            <div class="contact-info-group">
-                <label><span>Your Name</span></label>
-                <label><span>Your E-mail Address</span></label>
-
-                <input type="text" name="name">
-                <input type="email" name="_replyto">
-            </div>
-
-            <label><span>Feel Free To Speak Out!</span></label>
-            <textarea name="message"></textarea><br>
-            <input type="submit" value="Send" id="sendMailButton">
-        </form>
-    </div>
-
-
     <!-- The last part of the section aka. contact information -->
-    <div class="container-fluid" id="contactDiv" align="middle" style=" height: 250px">
+    <div class="container-fluid" id="contactDiv" align="middle">
         <h1 style="font-size: 66px" align="middle">Feel free to ask!</h1>
-        <hr>
+        <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+        <div class="container-fluid" id="mailDiv">
+            <form action="https://formspree.io/filamalek@hotmail.com"
+                  method="POST">
+
+                <div class="contact-info-group">
+                    <label><span>Your Name</span></label>
+                    <label><span>Your E-mail Address</span></label>
+
+                    <input type="text" name="name">
+                    <input type="email" name="_replyto">
+                </div>
+
+                <label><span>Let's hear it!</span></label>
+                <textarea name="message"></textarea><br>
+                <input type="submit" value="Send" id="sendMailButton">
+            </form>
+        </div>
         <div class="col-lg-4 col-lg-offset-2 text-center">
             <!--<i data-icon="phone" value="Phone Input Button"></i>-->
+            <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
             <p style="font-size: 22px">+45 91 11 80 04</p>
         </div>
         <div class="col-lg-4 text-center">
-            <!--<i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s" style="visibility: visible"></i>-->
-            <p style="font-size: 22px"><a href="#">filamalek@hotmail.com</a></p>
+            <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+            <p style="font-size: 22px"><a href="https://www.facebook.com/filip.malek.7">facebook</a></p>
         </div>
     </div>
 </div>
@@ -138,16 +138,26 @@
         $('body').delay(350).css({'overflow':'visible'});
     })
     //]]>
-
-    $( "#expandButton" ).click(function() {
+    var x = 1;
+    $( ".expander" ).click(function() {
         $( "#hiddenDiv" ).slideToggle('slow');
+        if(x ==1 ){
+            $("#expandButton").text("Less");
+            x++;
+        }
+        if(x == 2){
+            $("#expandButton").text("More");
+            x--;
+        }
+
+
+        /*if($("#hiddenDiv").css('display') == 'none' ){
+            $("#expandButton").text("More");
+        }
+        else{
+            $("#expandButton").text("Less");
+        }*/
     });
-
-    $( "#picturesButton" ).click(function() {
-        $( "#pictures" ).slideToggle('slow');
-    });
-
-
 </script>
 
 
