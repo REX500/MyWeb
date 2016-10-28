@@ -138,25 +138,29 @@
         $('body').delay(350).css({'overflow':'visible'});
     })
     //]]>
-    var x = 1;
+
+    $("#expandButton").click(function(){
+        $("#expandButton").toggle(function() {
+            $(this).text("More");
+        }, function() {
+            $(this).text("Less");
+        });
+    });
+
+
     $( ".expander" ).click(function() {
         $( "#hiddenDiv" ).slideToggle('slow');
-        if(x ==1 ){
+
+
+
+        /*console.log($("#expandButton").text());
+        if($("#expandButton").text() == 'More'){
             $("#expandButton").text("Less");
-            x++;
-        }
-        if(x == 2){
-            $("#expandButton").text("More");
-            x--;
-        }
-
-
-        /*if($("#hiddenDiv").css('display') == 'none' ){
-            $("#expandButton").text("More");
         }
         else{
-            $("#expandButton").text("Less");
-        }*/
+            $("#expandButton").text("More");
+        }
+        console.log($("#expandButton").text());*/
     });
 </script>
 
