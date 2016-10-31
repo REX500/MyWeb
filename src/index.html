@@ -57,7 +57,7 @@
             realized that that will be my occupation.
             Exactly those two are what make me a person that I am today....</p>
 
-            <button type="button"  id="expandButton" class="expander"> More</button>
+            <button type="button"  id="expandButton" class="expander">More</button>
     </div>
     <div class="container-fluid" id="hiddenDiv" style="display: none">
         <p>
@@ -138,30 +138,27 @@
         $('body').delay(350).css({'overflow':'visible'});
     })
     //]]>
-
-    $("#expandButton").click(function(){
-        $("#expandButton").toggle(function() {
-            $(this).text("More");
-        }, function() {
-            $(this).text("Less");
-        });
-    });
-
-
+    var expandButton = $("#expandButton");
     $( ".expander" ).click(function() {
         $( "#hiddenDiv" ).slideToggle('slow');
 
-
-
-        /*console.log($("#expandButton").text());
-        if($("#expandButton").text() == 'More'){
-            $("#expandButton").text("Less");
+        if(expandButton.text() == "More") {
+            expandButton.text("Less");
         }
         else{
-            $("#expandButton").text("More");
+            expandButton.text("More");
         }
-        console.log($("#expandButton").text());*/
     });
+
+    function testFunc() {
+        var a = 0;
+        let b = 1;
+        const d = 2;
+        for (let c = 0; c > 10; c++) {
+
+        }
+
+    }
 </script>
 
 
