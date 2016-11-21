@@ -1,3 +1,7 @@
+@media (max-width: 600px){
+
+}
+
 body{
     margin: 0;
     overflow: hidden;
@@ -48,25 +52,25 @@ body{
 
 @keyframes shadowSpin{
     0%{
-        box-shadow: 10px -10px #39CCCC, -10px 10px #FFDC00;
+        box-shadow: 10px -10px #0000FF, -10px 10px #0000FF;
     }
     25%{
-        box-shadow: 10px 10px #39CCCC, -10px -10px #FFDC00;
+        box-shadow: 10px 10px #0000FF, -10px -10px #0000FF;
     }
     50%{
-        box-shadow: -10px 10px #39CCCC, 10px -10px #FFDC00;
+        box-shadow: -10px 10px #0000FF, 10px -10px #0000FF;
     }
     75%{
-        box-shadow: -10px -10px #39CCCC, 10px 10px #FFDC00;
+        box-shadow: -10px -10px #0000FF, 10px 10px #0000FF;
     }
     100%{
-        box-shadow: 10px -10px #39CCCC, -10px 10px #FFDC00;
+        box-shadow: 10px -10px #0000FF, -10px 10px #0000FF;
     }
 }
 
 #load {
     z-index: 9999;
-    background-color: #FF4136;
+    background-color: #000000;
     opacity: 0.75;
     width: 10px;
     height: 10px;
@@ -76,8 +80,8 @@ body{
     left: 0;
     right: 0;
     border-radius: 0px;
-    border: 5px solid #FF4136;
-    box-shadow: 10px 0px #39CCCC, 10px 0px #01FF70;
+    /*border: 5px solid #FF4136;
+    box-shadow: 10px 0px #39CCCC, 10px 0px #01FF70;*/
     animation: shadowSpin 1s ease-in-out infinite;
 }
 
@@ -97,6 +101,7 @@ body{
     opacity: 0.9;
     font-family: ‘Courier New’, Courier, monospace;
     font-size: 25px;
+    font-weight: bold;
 }
 #aboutDiv{
     padding-top: 170px;
@@ -110,6 +115,7 @@ body{
 #aboutDiv p{
     font-family: ‘Courier New’, Courier, monospace;
     font-size: 25px;
+    font-weight: bold;
 }
 #hiddenDiv{
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -126,7 +132,7 @@ body{
     opacity:0.8;
     font-size: 25px;
     font-family: ‘Courier New’, Courier, monospace;;
-
+    font-weight: bold;
 }
 #expandButton{
     background-color: gray; /* Green */
@@ -188,6 +194,9 @@ hr {
 .navbar-brand:focus {
     outline: 0;
 }
+.navbar-brand{
+  padding-left: 20px;
+}
 .navbar-toggle {
     padding: 4px 6px;
     font-size: 14px;
@@ -206,8 +215,8 @@ hr {
 }
 /*Normal .css for the pages bellow, not the preloader*/
 #wrapper{
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url(images/main2.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/main2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -367,29 +376,21 @@ hr {
     +box-sizing(border-box);
 }
 
-
-#mailDiv input, textarea{
-    border: 3px solid gray;
-    +box-sizing(border-box);
-}
-#mailDiv input, textarea:focus{
-    color: dimgray;
-}
 #mailDiv textarea{
     margin: 0px; width: 355px; height: 102px;
 }
 #sendMailButton{
-    background-color: gray; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 0px;
-    vertical-align: middle;
-    horiz-align: center;
+  background-color: gray; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 0px;
+  vertical-align: middle;
+  horiz-align: center;
 }
 
 /*

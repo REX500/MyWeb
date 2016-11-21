@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Filip Land</title>
+    <title>Filip Malek</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -13,14 +13,17 @@
     <link rel="stylesheet" href="webStyle.css">
 </head>
 <body>
-<!--
+
 <div id="preloader">
     <div id="load"></div>
 </div>
--->
+
 <div class="container-fluid" id="wrapper">
-    <nav class="navbar navbar-default navbar-fixed-top">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
         <div class="container-fluid">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -29,15 +32,18 @@
                 </button>
                 <a class="navbar-brand" href="#">Filip Malek</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li class="expander"><a href="#aboutDiv">About</a></li>
-                <li><a href="#contactDiv">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" id="facebookNavbar">
-                <li><a href="#"><i class="fa fa-facebook fa-1x" aria-hidden="true"></i></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li class="expander" id="aboutNav"><a href="#aboutDiv">About</a></li>
+                  <li><a href="#contactDiv">Contact</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right" id="facebookNavbar">
+                  <li><a href="#"><i class="fa fa-facebook fa-1x" aria-hidden="true"></i></a></li>
+                  <li><a href="#"></a></li>
+              </ul>
+          </div>
         </div>
     </nav>
 
@@ -45,7 +51,7 @@
     <div class="container-fluid" id="welcomeDiv">
         <h1 align="middle">Welcome</h1>
         <hr>
-        <p  align="middle"> Reading trough this page will take you just a minute, while making it took me nearly forever :)</p>
+        <p  align="middle">Feel free to scroll down to get more info about me, my life and hobbies</p>
     </div>
     <div class="section" id="aboutDiv" data-background-color="$dark" style="text-align: center">
         <h1 style="font-size: 66px" align="middle"> About Me</h1>
@@ -115,13 +121,13 @@
                 <input type="submit" value="Send" id="sendMailButton">
             </form>
         </div>
-        <div class="col-lg-4 col-lg-offset-2 text-center">
+        <div class="col-md-4 col-lg-offset-2 text-center">
             <!--<i data-icon="phone" value="Phone Input Button"></i>-->
             <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
-            <p style="font-size: 22px">+45 91 11 80 04</p>
+            <p style="font-size: 22px">+45 91 11 20 04</p>
         </div>
-        <div class="col-lg-4 text-center">
-            <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+        <div class="col-md-4 text-center">
+            <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
             <p style="font-size: 22px"><a href="https://www.facebook.com/filip.malek.7">facebook</a></p>
         </div>
     </div>
@@ -157,10 +163,28 @@
         for (let c = 0; c > 10; c++) {
 
         }
-
     }
-</script>
 
+    var $root = $('html, body');
+    $("#aboutNav").click(function() {
+      console.log("It works");
+      $root.animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    });
+</script>
+<!--Google analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87626395-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
